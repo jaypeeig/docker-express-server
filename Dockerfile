@@ -4,6 +4,8 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
+RUN apk update && apk upgrade --no-cache libcrypto3 libssl3
+
 RUN npm install
 
 # Bundle app source

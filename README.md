@@ -18,5 +18,5 @@ docker build -t docker-express-server .
 Once the Docker image is built, you can run a container using the following command:
 
 ```
-docker run -p 8080:3000  docker-express-server
+docker run -p 8080:3000 --name express-server docker-express-server
 ```

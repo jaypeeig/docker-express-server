@@ -1,10 +1,8 @@
-FROM node:lts-alpine3.17
+FROM node:lts-alpine3.19
 
 WORKDIR /usr/src/app
 
 COPY package*.json ./
-
-RUN apk update && apk upgrade --no-cache libcrypto3 libssl3
 
 RUN npm install
 

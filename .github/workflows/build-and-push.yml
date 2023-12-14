@@ -26,5 +26,5 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           tags: cupaenglishengineering/docker-express-server:latest
-          platforms: linux/amd64,linux/arm64/v8
+          platforms: linux/amd64,linux/arm64/v8,linux/ppc64le,linux/s390x
           push: true

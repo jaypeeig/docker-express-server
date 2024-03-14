@@ -2,6 +2,10 @@ name: Build Multi-arch Image
 
 on: [push, workflow_dispatch]
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   build-and-push:
     name: Build image
